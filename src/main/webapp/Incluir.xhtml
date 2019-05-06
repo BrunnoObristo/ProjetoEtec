@@ -1,56 +1,51 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Incluir paginas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CADASTRO - ETEC</title>
 </head>
 <body>
-	<h:commandButton value="+ Novo">
-	</h:commandButton>
+	<h:commandButton value="+ Novo" icon="ui-icon-plus" oncomplete="PF('dgETEC').show"/>
 
-<!-- 	<script type="text/javascript">
-		function handleLoginRequest(xhr, status, args) {
-			if (args.validationFailed || !args.loggedIn) {
-				PF('dlg').jq.effect("shake", {
-					times : 5
-				}, 100);
-			} else {
-				PF('dlg').hide();
-				$('#loginLink').fadeOut();
-			}
-		}
-	</script>
+	<p:dialog header="Cadastro da ETEC" modal="true" width="450"
+		height="200" widgetVar="dgTalao" id="dgETEC">
+		
+		<h:panelGrid columns="2">
 
-
-	<h:form>
-		<h:outputLink value="javascript:void(0)" onclick="PF('dlg').show();"
-			title="login">
-			<p:graphicImage name="/demo/images/login.png" />
-		</h:outputLink>
-
-		<p:growl id="growl" sticky="true" showDetail="true" life="3000" />
-
-		<p:dialog header="Login" widgetVar="dlg" resizable="false">
-			<h:panelGrid columns="2" cellpadding="5">
-				<h:outputLabel value="Username:" />
-
-				<h:outputLabel for="password" value="Password:" />
-				<p:password id="password" value="#{userLoginView.password}"
-					required="true" label="password" />
-
-				<f:facet name="footer">
-					<p:commandButton value="Login" update="growl"
-						action="#{userLoginView.login}"
-						oncomplete="handleLoginRequest(xhr, status, args)" />
-				</f:facet>
-			</h:panelGrid>
-		</p:dialog>
-	</h:form>
+	<h:outputLabel value="Nome"/>
+	<h:inputText/>
 	
-	 -->
+	<h:outputLabel value="Código"/>
+	<h:inputText/>
+	
+	<h:outputLabel value="CEP"/>
+	<h:inputText/>
+	
+	<h:outputLabel value="Endereço"/>
+	<h:inputText/>
+	
+	<h:outputLabel value="Bairro"/>
+	<h:inputText/>
+	
+	<h:outputLabel value="Cidade"/>
+	<h:inputText/>
+	
+	</h:panelGrid>
+	
+	<f:facet name="footer">
+			<p:outputPanel layout="block" style="text-align:center">
+				<p:commandButton value="Confirmar" icon="ui-icon-check" />
+				<p:commandButton value="Cancelar" icon="ui-icon-close"
+					oncomplete="PF('dgETEC').hide()" />
+		</p:outputPanel>
+
+		</f:facet>
+
+	</p:dialog>
+	
 </body>
 </html>
