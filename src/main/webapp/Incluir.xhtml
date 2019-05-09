@@ -11,28 +11,48 @@
 <body>
 	<h:commandButton value="+ Novo" icon="ui-icon-plus" oncomplete="PF('dgETEC').show"/>
 
+	<p:growl id="msgs" showDetail="false" life="7000" sticky="false" align="right"/>
+
 	<p:dialog header="Cadastro da ETEC" modal="true" width="450"
 		height="200" widgetVar="dgTalao" id="dgETEC">
 		
 		<h:panelGrid columns="2">
 
 	<h:outputLabel value="Nome"/>
-	<h:inputText/>
+	<h:inputText
+		required="true"
+		label="Nome"
+		value="#{Escola.Nome}"/>
 	
 	<h:outputLabel value="Código"/>
-	<h:inputText/>
+	<h:inputText
+	required="true"
+	label="Código"
+	value="#{Escola.Código"/>
 	
 	<h:outputLabel value="CEP"/>
-	<h:inputText/>
+	<h:inputText
+	required="true"
+	label="CEP"
+	value="#{Escola.CEP}"/>
 	
 	<h:outputLabel value="Endereço"/>
-	<h:inputText/>
+	<h:inputText
+	required="true"
+	label="Endereço"
+	value="#{Endereço.Endereço}"/>
 	
 	<h:outputLabel value="Bairro"/>
-	<h:inputText/>
+	<h:inputText
+	required="true"
+	label="Bairro"
+	value="#{Endereço.Bairro}"/>
 	
 	<h:outputLabel value="Cidade"/>
-	<h:inputText/>
+	<h:inputText
+	required="true"
+	label="Cidade"
+	value="#{Endereço.Cidade}"/>
 	
 	</h:panelGrid>
 	
