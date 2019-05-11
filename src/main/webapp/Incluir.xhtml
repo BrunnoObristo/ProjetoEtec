@@ -9,6 +9,8 @@
 <title>CADASTRO - ETEC</title>
 </head>
 <body>
+
+
 	<h:commandButton value="+ Novo" icon="ui-icon-plus" oncomplete="PF('dgETEC').show"/>
 
 	<p:growl id="msgs" showDetail="false" life="7000" sticky="false" align="right"/>
@@ -16,19 +18,19 @@
 	<p:dialog header="Cadastro da ETEC" modal="true" width="450"
 		height="200" widgetVar="dgTalao" id="dgETEC">
 		
-		<h:panelGrid columns="2">
+		
 
 	<h:outputLabel value="Nome"/>
 	<h:inputText
 		required="true"
 		label="Nome"
 		value="#{Escola.Nome}"/>
-	
+	<!--  -->
 	<h:outputLabel value="Código"/>
 	<h:inputText
 	required="true"
 	label="Código"
-	value="#{Escola.Código"/>
+	value="#{Escola.Codigo}"/>
 	
 	<h:outputLabel value="CEP"/>
 	<h:inputText
@@ -40,21 +42,22 @@
 	<h:inputText
 	required="true"
 	label="Endereço"
-	value="#{Endereço.Endereço}"/>
+	value="#{Endereco.Endereco}"/>
 	
 	<h:outputLabel value="Bairro"/>
 	<h:inputText
 	required="true"
 	label="Bairro"
-	value="#{Endereço.Bairro}"/>
+	value="#{Endereco.Bairro}"/>
 	
 	<h:outputLabel value="Cidade"/>
 	<h:inputText
 	required="true"
 	label="Cidade"
-	value="#{Endereço.Cidade}"/>
+	value="#{Endereco.Cidade}"/>
 	
-	</h:panelGrid>
+	
+		</h:panelGrid>
 	
 	<f:facet name="footer">
 			<p:outputPanel layout="block" style="text-align:center">
@@ -66,6 +69,8 @@
 		</f:facet>
 
 	</p:dialog>
+	
+	
 	
 </body>
 </html>
